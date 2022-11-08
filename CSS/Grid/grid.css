@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    background: rgb(255, 255, 255);
+}
+
+.container{
+    /* max-width: 960px;
+    margin:100px auto; */
+    
+    margin: 50px 0px;
+    padding:10px;
+
+
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    /* grid-template-columns: repeat(3, 1fr); */
+    
+    /* responsible to define row height */
+    grid-auto-rows: minmax(70px, auto);
+
+    
+    /* column-gap: 20px;
+    row-gap: 20px;
+    gap: 20px; */
+
+
+    /* define row heights  */
+    /* grid-template-rows: 300px 100px 100px; */
+
+    /* vertical alignment (y axis) */
+    /* grid-auto-rows: minmax(100px, auto);
+    align-items: center; */
+
+    /* Horizontal alignment (x axis) */
+    /* grid-template-columns: repeat(3, 250px);
+    justify-content: end; */
+
+    
+
+}
+.item{
+    background: teal;
+    color:aliceblue;
+    font-size: 20px;
+    
+    border: 1px rgb(0, 255, 76) solid;
+    padding:20px;
+}
+
+/* to check align self and justify self for grid item */
+.item:nth-of-type(2){
+    height: 100px;
+    width: 100px;
+    align-self: center;
+    justify-self: center;
+}
+
+/* grid Column Span  */
+.item:nth-of-type(1){
+    background: rgb(9, 9, 41);
+
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* alternate  */
+    grid-column: 1/3;
+
+}
+
+/* grid row Span  */
+.item:nth-of-type(3){
+    background-color: rgb(9, 9, 41);
+    /* grid-row-start: 4;
+    grid-row-end: 5; */
+    grid-row:2/5;
+}
+
+/* ....................................................................  */
+
+/* Grid Responsiveness */
+.container2{
+
+    padding: 10px;
+    font-size: 20px;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill,
+    minmax(300px, 1fr));
+
+}
+
+.item2{
+    background: teal;
+    border: 1px rgb(0, 255, 76) solid;
+    color: white;
+    padding: 20px;
+}
+
+/* @media (max-width: 500px){
+    .container2{
+        grid-template-columns: 1fr;
+    }
+} */
+
+@media(max-width: 600px){
+    .container2 {
+        grid-template-columns: 1fr;
+    }
+}
