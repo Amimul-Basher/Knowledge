@@ -13,6 +13,7 @@ public class Squirrel extends Animal {
     //Overrides with different access modifier
     @Override
      public void eat(){
+        //Accessing parent class method using super keyword
         super.eat();
         System.out.println("They are very clever. It stay alert while eating");
     }
