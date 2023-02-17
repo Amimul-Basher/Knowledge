@@ -7,6 +7,6 @@ public class Green implements Color{
     }
     @Override
     public void drawPicture(){
-
+        System.out.println("Green color filled");
     }
 }

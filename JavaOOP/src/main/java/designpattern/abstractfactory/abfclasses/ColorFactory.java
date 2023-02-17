@@ -3,17 +3,18 @@ package designpattern.abstractfactory.abfclasses;
 import designpattern.abstractfactory.classes.*;
 
 public class ColorFactory extends AbstractFactory{
-    @Override
-    public Shape getShpae(String shape) {
-        return null;
+    public String color;
+    public ColorFactory(String color){
+        this.color = color;
     }
+
     @Override
-    public Color getColor(String color){
-        if (color == "Red"){
+    public Color getPaint(){
+        if (this.color.equals(DrawingType.ColorType.Red.toString())){
             return new Red();
-        }else if(color == "Blue"){
+        }else if(this.color.equals(DrawingType.ColorType.Green.toString())){
             return new Blue();
-        }else if(color == "Green"){
+        }else if(this.color.equals(DrawingType.ColorType.Blue.toString())){
             return new Green();
         }else{
             return null;

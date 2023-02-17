@@ -6,6 +6,6 @@ public class Blue implements Color{
     }
     @Override
     public void drawPicture(){
-
+        System.out.println("Blue color filled");
     }
 }

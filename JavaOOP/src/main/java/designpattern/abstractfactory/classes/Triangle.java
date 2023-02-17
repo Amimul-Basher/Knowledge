@@ -7,6 +7,6 @@ public class Triangle implements Shape{
     }
     @Override
     public void drawPicture() {
-
+        System.out.println("Triangle shape is drawn");
     }
 }
