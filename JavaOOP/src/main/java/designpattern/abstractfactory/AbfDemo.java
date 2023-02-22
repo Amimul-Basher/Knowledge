@@ -20,5 +20,8 @@ public class AbfDemo {
 
         Paint color = factoryCreator.createFactory("Red").getPaint();
         color.drawPicture();
+        Paint object = factoryCreator.createReflectionFactory("Vertical").getPaint();
+        object.drawPicture();
+
     }
 }
