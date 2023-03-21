@@ -1,6 +1,6 @@
 package designpattern.factory.classes;
 
-public class Roadway implements Transportation{
+public class Bus implements Transportation {
     @Override
     public int definePlatoonSize(int size) {
         return 0;
@@ -8,6 +8,6 @@ public class Roadway implements Transportation{
 
     @Override
     public void getVehicle() {
-        System.out.println("Platoon forwarding with tank by road");
+        System.out.println("Let's move to the destination by bus");
     }
 }

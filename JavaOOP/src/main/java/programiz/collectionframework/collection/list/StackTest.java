@@ -16,10 +16,14 @@ public class StackTest {
         System.out.println(stack.get(2));
 
 
-        Deque<Integer> deque = new ArrayDeque<>();
-        deque.push(1);
-        deque.push(2);
-        deque.push(3);
-        System.out.println(new ArrayList<>(deque)); // prints 3, 2, 1
+        Deque<Integer> stackDeque = new ArrayDeque<>();
+        stackDeque.push(1);
+        stackDeque.push(2);
+        stackDeque.push(3);
+        System.out.println(new ArrayList<>(stackDeque)); // prints 3, 2, 1
+        int last  = stackDeque.pop();
+        System.out.println(last);
+        System.out.println(stackDeque.peek());
+
     }
 }

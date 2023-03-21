@@ -1,6 +1,6 @@
 package designpattern.notification.factories;
 
-public enum FactoryTypes {
+public enum     FactoryTypes {
     Mobile{
         public AbstractFactory getFactory(){return new MobileNotificationFactory();}
     }, Mail{

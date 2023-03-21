@@ -5,10 +5,15 @@ import designpattern.factory.factoryclasses.TransportFactory;
 
 public class test {
     public static void main(String[] args){
-        TransportFactory transportFactory = new TransportFactory();
-        Transportation transportation = transportFactory.getTransport("Roadway");
-        transportation.getVehicle();
-        transportation.moveToDestination("West Bengal");
+        try{
+            TransportFactory transportFactory = new TransportFactory();
+            Transportation transportation = transportFactory.getTransportReflection("Car");
+            transportation.getVehicle();
+            transportation.moveToDestination("Dhaka");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
 
     }
 }
